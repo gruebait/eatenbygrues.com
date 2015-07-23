@@ -10,8 +10,9 @@ github_username:  gruebait
 permalink: /:categories/:title
 
 # Custom site settings
-logo: "img/logo.png"
+logo: "/img/logo.png"
 welcome: "Welcome to Eaten by Grues"
+background: "/img/bk.jpg"
 
 # Build settings
 markdown: kramdown

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html id="{% if page.bodyid %}{{ page.bodyid }}{% else %}{{ page.categories[0] }}{% endif %}"{% if page.bodyclass %} class="{{ page.bodyclass }}"{% endif %}>
   <head>
     <meta charset="utf-8">
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
@@ -15,7 +15,7 @@
     <script src="/js/eatenbygrues@@fileExt.js"></script>
     {% include favicons.html %}
   </head>
-  <body id="{% if page.bodyid %}{{ page.bodyid }}{% else %}{{ page.categories[0] }}{% endif %}"{% if page.bodyclass %} class="{{ page.bodyclass }}"{% endif %}>
+  <body>
     <header id="site-header">
       <hgroup id="site-brand">
         <img src="img/tinylogo.png" alt="Eaten by Grues" width="16" >

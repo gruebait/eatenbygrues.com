@@ -67,13 +67,19 @@ img {
 }
 
 #home {
+  height: 100%;
+  width: 100%;
+}
+
+#home body {
   //background-color: $page-background-color;
+  background: url('{{ site.background }}') no-repeat center center;
+  background-size: cover;
   color: $text-color;
   // Make sure page fills 100% of viewport
-  html, body, #container {
-    height: 100%;
-    width: 100%;
-  }
+  height: 100%;
+  width: 100%;
+
   // Center the logo horz and vert
   #site-title {
     font-size: 58px;
@@ -103,11 +109,13 @@ img {
     position: absolute;
     left: 50%;
     top: 50%;
-    width: 200px;
-    height: 82px;
-    margin-left: -100px;
-    margin-top: -41px;
-    text-align: right;
+    width: 240px;
+    height: 122px;
+    margin-left: -120px;
+    margin-top: -61px;
+    text-align: center;
+    padding: 20px;
+    background-color: #232323;
     // transform:translate(-50%,-50%);
     // -webkit-transform:translate(-50%,-50%);
   }
