@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html{% if page.bodyclass %} class="{{ page.bodyclass }}"{% endif %}>
+  <head>
+    <meta charset="utf-8">
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="description" content="{{ site.description }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="alternate" type="application/rss+xml" title="Eaten by Grues (RSS)" href="/feed.xml">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Source+Sans+Pro:300,400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href='/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/css/site.css">
+    <script src="/js/eatenbygrues@@fileExt.js"></script>
+    {% include favicons.html %}
+  </head>
+  <body>
+    <header id="site-header">
+      <hgroup id="site-brand">
+        <a href="/"><img src="img/tinylogo.png" alt="Eaten by Grues" width="16" ></a>
+      </hgroup>
+      <hgroup>
+        <nav>
+          <ul>
+            <li{% if page.pageid == "about" %} class="active"{% endif %}><a href="/about">About</a></li>
+            <li{% if page.pageid == "hire" %} class="active"{% endif %}><a href="/hire">hire</a></li>
+            <li><a href="https://www.facebook.com/eatenbygrues"><span class="fa fa-facebook"></span></a></li>
+            <li><a href="https://twitter.com/iamgruebait"><span class="fa fa-twitter"></span></a></li>
+          </ul>
+        </nav>
+      </hgroup>
+    </header>
+    <main id="container">{{ content }}</main>
+  </body>
+</html>

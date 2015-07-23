@@ -1,0 +1,14 @@
+// Normalize margin and padding
+html, body, header, ul, ol, li, main {
+  padding: 0;
+  margin: 0;
+}
+
+// Set display:block for browsers that don't recognize <main>.
+main {
+  display: block;
+}
+
+ul,ol {
+  list-style-position: outside;
+}

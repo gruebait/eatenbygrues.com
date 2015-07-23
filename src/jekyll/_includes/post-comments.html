@@ -1,0 +1,19 @@
+<div id="comments">
+{% if page.hidecomments %}
+<p><em>Comments for this post are disabled.</em></p>
+{% else %}
+{% include comment-form-small.html %}
+<div id="comments-list" data-count="{{ page.comments | size }}">
+{% for comment in page.comments %}
+<div class="comment">
+<div class="cmt-header">
+{{ comment.displayname }} <span class="date">{{ comment.date }}</span>
+</div>
+<div class="cmt-body">
+{{ comment.content }}
+</div>
+</div>
+{% endfor %}
+</div>
+{% endif %}
+</div>

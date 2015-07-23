@@ -1,0 +1,172 @@
+---
+---
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import "common", "reset", "base", "syntax-highlighting";
+
+@font-face {
+    font-family: 'xkcdregular';
+    src: url('/fonts/xkcd/xkcd-Regular-webfont.eot');
+    src: url('/fonts/xkcd/xkcd-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/xkcd/xkcd-Regular-webfont.woff2') format('woff2'),
+         url('/fonts/xkcd/xkcd-Regular-webfont.woff') format('woff'),
+         url('/fonts/xkcd/xkcd-Regular-webfont.ttf') format('truetype'),
+         url('/fonts/xkcd/xkcd-Regular-webfont.svg#xkcdregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+header {
+  padding: 5px;
+  padding-bottom: 7px;
+}
+
+article {
+  max-width: 650px;
+  margin: 100px auto;
+  padding: 0 20px;
+}
+
+article > header {
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+#site-header {
+  height: 32px;
+  background-color: $header-background-color;
+  //line-height: 18px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #FFF;
+  margin: 0;
+  a, a:visited {
+    color: #8CA9C7;
+  }
+  // For whatever reason, Bootstrap Glyphicons sets a bunch of global styles.
+  h1 {
+    font-size: 1em;
+    font-weight: 400;
+    margin: 0;
+  }
+  nav {
+    text-transform: lowercase;
+  }
+  li {
+    display: inline;
+    margin-right: 20px;
+    &.active {
+      > a, > a:visited {
+        color: gold;
+      }
+    }
+  }
+}
+
+#home {
+  //background-color: $page-background-color;
+  color: $text-color;
+  // Make sure page fills 100% of viewport
+  html, body, #container {
+    height: 100%;
+    width: 100%;
+  }
+  // Center the logo horz and vert
+  #site-title {
+    font-size: 58px;
+    font-family: $base-title-family;
+    font-weight: 300;
+    margin: 0;
+    span {
+      color: #fff;
+      font-weight: bold;
+    }
+  }
+  // #slogan {
+  //   font-size: 13px;
+  //   text-transform: lowercase;
+  //   position: relative;
+  //   top: -8px;
+  //   color: #6BB6FF;//#595959;
+  //   display: none;
+  // }
+  // #logo {
+  //   position: absolute;
+  //   left: -40px;
+  //   font-size: 40px;
+  //   top: 14px;
+  // }
+  #badge {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 200px;
+    height: 82px;
+    margin-left: -100px;
+    margin-top: -41px;
+    text-align: right;
+    // transform:translate(-50%,-50%);
+    // -webkit-transform:translate(-50%,-50%);
+  }
+}
+
+#site-brand {
+  width: 20px;
+  float: left;
+}
+
+#site-header > hgroup > nav {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  li {
+    display: static;
+    float: left;
+    margin: 0 5px 0 5px;
+  }
+}
+
+html.single {
+  a, a:visited, a:hover {
+    color: $link-color;
+    text-decoration: none;
+    font-weight: 400
+  }
+  body {
+    font-weight: 400;
+    color: $text-color;
+  }
+  article {
+    h1 {
+      color: $header-color;
+      margin: 1em 0;
+    }
+    li {
+      margin-left: 2em;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    ul,ol,p {
+      margin-bottom: 15px;
+    }
+    font-size: 15px;
+  }
+}
+
+figure {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  width: 100%;
+  > img {
+    margin: 0 auto;
+  }
+}
+
+figcaption {
+  text-align: center;
+  font-style: italic;
+}

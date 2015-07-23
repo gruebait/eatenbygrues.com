@@ -1,0 +1,13 @@
+<header id="site-header">
+<h1><a id="site-title" href="/">Eaten by Grues</a></h1>
+<nav id="site-nav">
+<a href="#" class="menu-icon"></a>
+<ul class="trigger">
+<li><a class="page-link{% if page.url == '/' %} active{% endif %}" href="/">Home</a></li>
+<li><a href="/journal/" class="page-link{% if page.url contains '/journal/' %} active{% endif %}">Journal</a></li>
+<li><a href="/archives/" class="page-link{% if page.url contains '/archives/' %} active{% endif %}">Archives</a></li>
+<li><a href="/projects/" class="page-link{% if page.url contains '/projects/' %} active{% endif %}">Projects</a></li>
+<li><a href="/about" class="page-link{% if page.url contains '/about' %} active{% endif %}">About</a></li>
+</ul>
+</nav>
+</header>

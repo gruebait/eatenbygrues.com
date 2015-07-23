@@ -1,0 +1,22 @@
+<head>
+<meta charset="utf-8">
+<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+<meta name="description" content="{{ site.description }}">
+<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+<link rel="alternate" type="application/rss+xml" title="Eaten by Grues (RSS)" href="/feed.xml" />
+<meta name="viewport" content="width=device-width initial-scale=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+<!-- build:css({app,.tmp}) /css/main.css -->
+<link rel="stylesheet" href="/css/main.css">
+<!-- endbuild -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+<!-- build:js({app, .tmp}) /js/scripts.js -->
+<script src="/js/jquery.cookie.js"></script>
+<script src="/js/color.js"></script>
+<!-- endbuild -->
+<link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,500,700|Open+Sans+Condensed:300,300italic,700|Loved+by+the+King' rel='stylesheet' type='text/css'>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+{% include analytics.html %}
+</head>

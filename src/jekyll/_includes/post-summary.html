@@ -1,0 +1,13 @@
+<div class="post-card {{ post.categories | join: ' ' | remove: ',' }}"{% if post.image %} style="background: url('{{ post.image }}') no-repeat {{ post.image_pos }}; background-size: cover;"{% endif %}>
+<div class="post-card-header">
+<h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+{{ post.title-prefix }}{{ post.title }}
+</a></h2>
+</div>
+<div class="post-card-footer">
+<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+</div>
+{% if post.image %}
+<img src="{{ post.image }}" width="256" style="display: none;" />
+{% endif %}
+</div>
