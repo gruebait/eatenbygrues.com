@@ -4,6 +4,10 @@ _drafts/
 src/jekyll/img/
 src/jekyll/*.md
 src/jekyll/google*.html
+src/jekyll/*.png
+src/jekyll/*.ico
+src/jekyll/*.xml
+src/jekyll/*.json
 
 # Exclude Jekyll / Bower / Node folders
 dist/
