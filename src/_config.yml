@@ -9,6 +9,10 @@ twitter_username: iamgruebait
 github_username:  gruebait
 permalink: /:categories/:title
 
+# Custom site settings
+logo: "img/logo.png"
+welcome: "Welcome to Eaten by Grues"
+
 # Build settings
 markdown: kramdown
 
