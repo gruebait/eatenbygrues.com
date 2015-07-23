@@ -96,8 +96,6 @@ module Jekyll
     # Obtain destination path, appending file extension for documents that lack one.
     def destination_with_clean_urls(dest)
       path = destination_without_clean_urls(dest)
-      #print self.inspect
-      #print "\n-----------------------------\n"
       ext = Jekyll::Renderer.new(site, self).output_ext
       if !(asset_file? || yaml_file?) && path !~ /#{ext}$/
         path += ext

@@ -1,0 +1,19 @@
+---
+layout: master-bare
+bodyclass: single
+---
+<article class="post">
+<header>
+<nav>A list of posts tagged '{{ page.tag }}'</nav>
+<ul>
+{% for post in site.posts %}
+  {% for tag in post.tags %}
+    {% if tag == page.tag %}
+      <li class="archive_list">
+      {% include post-summary.html %}
+      </li>
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+</ul>
+</article>

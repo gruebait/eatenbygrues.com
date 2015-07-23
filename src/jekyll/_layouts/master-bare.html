@@ -18,16 +18,18 @@
   <body>
     <header id="site-header">
       <hgroup id="site-brand">
-        <a href="/"><img src="img/tinylogo.png" alt="Eaten by Grues" width="16" ></a>
+        <a href="/"><img src="/img/tinylogo.png" alt="Eaten by Grues" width="16" ></a>
       </hgroup>
       <hgroup>
         <nav>
           <ul>
             {% for node in site.pages %}
-              {% if page.url == node.url %}
-              <li class="active"><a href="{{node.url}}" class="active">{{node.title}}</a></li>
-              {% else %}
-              <li><a href="{{node.url}}">{{node.title}}</a></li>
+              {% if node.menu or node.cat %}
+                {% if page.url == node.url %}
+                <li class="active"><a href="{{node.url}}" class="active">{{node.title}}</a></li>
+                {% else %}
+                <li><a href="{{node.url}}">{{node.title}}</a></li>
+                {% endif %}
               {% endif %}
             {% endfor %}
             <li><a href="https://www.facebook.com/eatenbygrues"><span class="fa fa-facebook"></span></a></li>

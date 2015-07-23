@@ -1,0 +1,22 @@
+---
+layout: master-bare
+bodyclass: single
+---
+<article class="post">
+<header>
+<nav>A list of posts categorized '{{ page.cat }}'</nav>
+<ul>
+  {% assign post_count = 0 %}
+  {% for cat in site.categories %}
+     {% if cat[0] == page.cat %}
+        {% for post in cat[1] %}
+           {% if post.categories.last == page.cat %}
+              <li class="archive_list">
+              {% include post-summary.html %}
+              </li>
+           {% endif %}
+        {% endfor %}
+     {% endif %}
+  {% endfor %}
+</ul>
+</article>
