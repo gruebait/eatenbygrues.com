@@ -5,6 +5,7 @@ assets/
 dist/
 bower_components/
 node_modules/
+_site/
 
 
 # Ignore hidden folders #
