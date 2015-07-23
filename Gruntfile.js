@@ -54,38 +54,6 @@ module.exports = function (grunt) {
       }
     },
 
-    sass: {
-      options: {
-        bundleExec: true,
-        debugInfo: false,
-        lineNumbers: false,
-        loadPath: 'app/_bower_components'
-      },
-      // Compile and copy SCSS files
-      dist: {
-        files: [{
-          expand: true,
-          cwd: 'src/jekyll/_sass',
-          src: '**/*.{scss,sass}',
-          dest: 'dist/css',
-          ext: '.css'
-        }]
-      },
-      server: {
-        options: {
-          debugInfo: true,
-          lineNumbers: true
-        },
-        files: [{
-          expand: true,
-          cwd: 'src/jekyll/_sass',
-          src: '**/*.{scss,sass}',
-          dest: '.tmp/css',
-          ext: '.css'
-        }]
-      }
-    },
-
     // Uglify our site-specific JS (release only)
     uglify: {
       options: {
@@ -127,15 +95,6 @@ module.exports = function (grunt) {
           expand: true,
           cwd: '.tmp/jekyll',
           src: '**/*',
-          dest: 'dist'
-        }]
-      },
-      // Copy favicons
-      favicons: {
-        files: [{
-          expand: true,
-          flatten: true,
-          src: [ 'assets/favicon/generated/**' ],
           dest: 'dist'
         }]
       },
@@ -215,7 +174,7 @@ module.exports = function (grunt) {
     grunt.task.run( ['jekyll','includereplace', 'copy:jekyll', 'prettify'] );
     grunt.task.run( grunt.option('simple') ?
       ['copy:trimHtml'] :
-      ['copy:favicons', 'copy:js', 'copy:trimHtml' ] );
+      ['copy:js', 'copy:trimHtml' ] );
     grunt.task.run( ['clean:trimHtml'/*, 'clean:temp'*/ ] );
     grunt.task.run( config === 'release' ? 'uglify' : 'copy:indjs' );
 
