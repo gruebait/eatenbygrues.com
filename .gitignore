@@ -1,5 +1,9 @@
-# Exclude assets until they're cleaned up
-assets/
+# Exclude content
+_posts/
+_drafts/
+src/jekyll/img/
+src/jekyll/*.md
+src/jekyll/google*.html
 
 # Exclude Jekyll / Bower / Node folders
 dist/

@@ -113,6 +113,14 @@ module.exports = function (grunt) {
     },
 
     copy: {
+      // Copy content files from the content project
+      content: {
+        files: [{
+          expand: true, cwd: '../eatenbycontent/content',
+          src: '**',
+          dest: 'src/jekyll'
+        }]
+      },
       // Copy Jekyll files from /.tmp to /dist
       jekyll: {
         files: [{
@@ -203,6 +211,7 @@ module.exports = function (grunt) {
     config === 'debug' && (opts.jsMinExt = '');
 
     grunt.task.run( grunt.option('simple') ? 'clean:temp' : 'clean' );
+    grunt.task.run( ['copy:content'] );
     grunt.task.run( ['jekyll','includereplace', 'copy:jekyll', 'prettify'] );
     grunt.task.run( grunt.option('simple') ?
       ['copy:trimHtml'] :
