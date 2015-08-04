@@ -143,6 +143,17 @@ html.single {
     text-decoration: none;
     font-weight: 400
   }
+  .light {
+    background-color: #FBF0DB;
+    color: #232323;
+    padding: 20px;
+    .post-title {
+      color: $dungeon-header-color;
+    }
+    a, a:visited, a:hover {
+      color: $dungeon-header-color;
+    }
+  }
   body {
     font-weight: 400;
     color: $text-color;

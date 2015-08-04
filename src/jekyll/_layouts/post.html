@@ -2,7 +2,7 @@
 layout: master-bare
 bodyclass: single
 ---
-<article class="post">
+<article class="post light">
 <header>
 <nav>An <a href="/">Eaten by Grues</a> creation</nav>
 <h1 class="post-title">{{ page.title-prefix }}{{ page.title }}</h1>
@@ -12,5 +12,4 @@ bodyclass: single
 <div style="max-width: 600px;">
 {{ content }}
 </div>
-<p>{% for tag in page.tags %}<a href="/tag/{{ tag }}">{{ tag }}</a>{% endfor %}</p>
 </article>
