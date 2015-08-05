@@ -15,7 +15,7 @@ welcome: "Welcome to Eaten by Grues"
 background: "/img/bk.jpg"
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
 
 ################################################################################
 # Collections
